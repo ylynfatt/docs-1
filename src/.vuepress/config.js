@@ -16,9 +16,26 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ['meta', { name: 'theme-color', content: '#3C82F6' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['link', { rel: "apple-touch-icon", type: "image/png", sizes: "180x180", href: "/apple-touch-icon.png"}],
+    ['link', { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png"}],
+    ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png"}],
+    ['link', { rel: "manifest", href: "/site.webmanifest"}],
+    ['link', { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#5bbad5"}],
+    ['meta', { name: "msapplication-TileColor", content: "#da532c"}],
+    ['meta', { name: "theme-color", content: "#ffffff"}],
+    ['script', {
+        async: true,
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-QXEXZY8MY8'
+    }],
+    ['script', {}, `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-QXEXZY8MY8');
+    `],
   ],
 
   /**
@@ -27,11 +44,20 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: '',
+    logo: '/getcandy_icon.svg',
+    repo: 'getcandy/getcandy',
     editLinks: false,
-    docsDir: '',
-    editLinkText: '',
+    docsDir: 'src',
+    docsRepo: 'getcandy/docs',
+    docsBranch: 'main',
+    editLinks: true,
+    editLinkText: 'Help us improve this page!',
+    smoothScroll: true,
     lastUpdated: false,
+    algolia: {
+      apiKey: '83bfbfd25020e4e230abb7a2c6d94a1c',
+      indexName: 'getcandy'
+    },
     nav: [
       {
         text: 'Roadmap',
@@ -40,10 +66,6 @@ module.exports = {
       {
         text: 'Discord',
         link: 'https://discord.gg/v6qVWaf'
-      },
-      {
-        text: 'GitHub',
-        link: 'https://github.com/getcandy/getcandy'
       }
     ],
     sidebar: [
