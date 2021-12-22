@@ -154,12 +154,13 @@ $myModel->unscheduleCustomerGroup($customerGroup, $pivotData);
 
 ### Parameters
 
-|Field|Description|Type|Default
-|:-|:-|
+|Field|Description|Type|Default|
+|:-|:-|:-|:-|
 |`customerGroup`|A collection of CustomerGroup models or id's.|mixed|
 |`startDate`|The date the customer group will be active from.|`DateTime`|
 |`endDate`|The date the customer group will be active until.|`DateTime`|
 |`pivotData`|Any additional pivot data you may have on your link table. (not including scheduling defaults)|`array`|
+
 
 **Pivot Data**
 
