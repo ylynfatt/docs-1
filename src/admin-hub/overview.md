@@ -23,4 +23,4 @@ That's it, you're done. Just remember that in order to create a staff member to 
 
 ## Accessing the hub
 
-Once the package is installed, just head to `/hub` and you should see the login screen.
+Once the package is installed, just head to `http://<yoursite>/hub` and you should see the login screen.
