@@ -146,10 +146,11 @@ $product->dissociate($associatedProduct, Product::CROSS_SELL);
 
 ## Database Schema
 
-`product_associations`
-  - `id`
-  - `product_id`
-  - `product_association_id`
-  - `type` (cross-sell, up-sell, alternate)
-  - `created_at`
-  - `updated_at`
+|Field|Description|
+|:-|:-|
+|`id`||
+|`product_id`||
+|`product_association_id`||
+|`type`|(cross-sell, up-sell, alternate)|
+|`created_at`||
+|`updated_at`||
