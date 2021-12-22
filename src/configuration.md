@@ -27,7 +27,7 @@ So that GetCandy tables do not conflict with your existing application database 
 - Pending order expiry
 - Statuses ??? Should these go in the database?
 
-````php
+```php
 'pending' => [
     'timeout' => 30, // 30 minutes
     'timeout_auto_extend' => true,
@@ -41,7 +41,7 @@ So that GetCandy tables do not conflict with your existing application database 
 
 Transformations for all uploaded images.
 
-````php
+```php
 'transformations' => [
     'zoom' => [
         'width' => 500,
