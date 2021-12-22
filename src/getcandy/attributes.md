@@ -103,8 +103,9 @@ class Collection extends Model
 Then ensure you have a [JSON field](https://laravel.com/docs/8.x/migrations#column-method-json) on your model's table called `attribute_data`.
 
 
-> {info} When loading models it is advised you eager load the attribute data required.
-
+::: tip
+When loading models it is advised you eager load the attribute data required.
+:::
 
 ### Accessing Attribute Data.
 

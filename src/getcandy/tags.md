@@ -12,7 +12,9 @@ Tags serve a simple function in GetCandy, you can add tags to models. This is us
 
 For example, you could have two products "Blue T-Shirt" and "Blue Shoes", which in their nature are unrelated, but you could add a `BLUE` tag to each product and then create a Dynamic Collection to include any products with a `BLUE` tag and they will be returned.
 
-> {info} Heads up! Tags are converted uppercase as they are saved.
+::: tip
+Heads up! Tags are converted uppercase as they are saved.
+:::
 
 <a name="enablingtags"></a>
 ## Enabling tags

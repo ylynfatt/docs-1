@@ -185,7 +185,9 @@ GetCandy\Models\OrderLine
 
 ### Create an order line
 
-> {info} If you are using the `createOrder` method on a cart, this is all handled for you automatically.
+::: tip
+If you are using the `createOrder` method on a cart, this is all handled for you automatically.
+:::
 
 ```php
 \GetCandy\Models\OrderLine::create([
@@ -206,8 +208,9 @@ $order->lines()->create([
 
 An order can have many addresses, typically you would just have one for billing and one for shipping.
 
-> {info} If you are using the `createOrder` method on a cart, this is all handled for you automatically.
-
+::: tip
+If you are using the `createOrder` method on a cart, this is all handled for you automatically.
+:::
 
 ```php
 \GetCandy\Models\OrderAddress::create([
@@ -247,7 +250,9 @@ $order->billingAddress;
 <a name="shipping-options"></a>
 ## Shipping Options
 
-> {info} This section is under active development and this part of the docs may be extended or changed at any time.
+::: tip
+This section is under active development and this part of the docs may be extended or changed at any time.
+:::
 
 On your checkout, if your customer has added an item that needs shipping, you're likely going to want to display some shipping options. Currently the best way to do this is to implement your own by adding a `ShippingModifier` and adding using that to determine what shipping options you want to make available and add them to the `ShippingManifest` class.
 
@@ -340,7 +345,9 @@ GetCandy\Models\Transaction
 
 ### Create a transaction
 
-> {info} Just because an order has a transaction does not mean it has been placed. GetCandy determines whether an order is considered placed when the `placed_at` column has a datetime, regardless if any transactions exist or not.
+::: tip
+Just because an order has a transaction does not mean it has been placed. GetCandy determines whether an order is considered placed when the `placed_at` column has a datetime, regardless if any transactions exist or not.
+:::
 
 Most stores will likely want to store a transaction against the order, this helps determining how much has been paid, how it was paid and give a clue on the best way to issue a refund if needed.
 

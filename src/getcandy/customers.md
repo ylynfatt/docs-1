@@ -107,7 +107,9 @@ $customerGroup = GetCandy\Models\CustomerGroup::create([
 ]);
 ```
 
-> {info} You can only have one default at a time, if you create a customer group and pass default to true, then the existing default will be set to `false`.
+::: tip
+You can only have one default at a time, if you create a customer group and pass default to true, then the existing default will be set to `false`.
+:::
 
 ## Scheduling availability
 
@@ -212,4 +214,6 @@ Will query for customer groups which are enabled, the start date is after the `n
 
 If you omit the second parameter the scope will take the current date and time.
 
-> {info} A model will only be returned if the `enabled` column is positive, regardless of whether the start and end dates match.
+::: tip
+A model will only be returned if the `enabled` column is positive, regardless of whether the start and end dates match.
+:::

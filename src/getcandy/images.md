@@ -113,8 +113,9 @@ Each transformation definition accepts the following options
 
 You can extend your own models to use media, either by using our implementation or by implementing medialibrary directly. It's totally up to you and your requirements. If you want to use medialibrary directly, [just follow their guides](https://spatie.be/docs/laravel-medialibrary/v9/basic-usage/preparing-your-model) and you'll be all set.
 
-> {danger} If you decide to use medialibrary directly, you will not have access to our transformations or any other GetCandy features we add.
-
+::: warning
+If you decide to use medialibrary directly, you will not have access to our transformations or any other GetCandy features we add.
+:::
 
 ### Extending with GetCandy
 

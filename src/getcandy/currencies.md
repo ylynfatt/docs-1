@@ -53,7 +53,9 @@ The steps we take are:
 
 This then gives us the correct format and allows it to be specified per currency.
 
-> {danger} `{value}` must always be present, otherwise the price will not be swapped out correctly.
+::: warning
+`{value}` must always be present, otherwise the price will not be swapped out correctly.
+:::
 
 <a name="exchange-rates"></a>
 ## Exchange rates

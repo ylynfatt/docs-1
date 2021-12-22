@@ -70,7 +70,9 @@ This will take you through a set of questions to configure your GetCandy install
 Note: there isn't currently a function to automatically remove the demo data.
 
 
-> {success} You are now installed!
+::: tip Success 🎉
+You are now installed!
+:::
 
 ### Running Seeders
 

@@ -107,7 +107,9 @@ You can associate attributes to a product type like so (it's just a straight for
 $productType->mappedAttributes()->associate([ /* attribute ids ... */ ]);
 ```
 
-> {danger} If you decide to delete an attribute, this will cause the association to be dropped and you could lose data.
+::: warning
+If you decide to delete an attribute, this will cause the association to be dropped and you could lose data.
+:::
 
 ### Retrieving the product type relationship
 If you have a product, you can fetch it's product like like so:
@@ -173,7 +175,9 @@ These are what you use to define the different options a product has available t
 
 You could have a `ProductOption` called "Colour" and then multiple `ProductionOptionValue` models for each colour you would like to offer.
 
-> {primary} Product options and Product option values are defined at a system level and are translatable.
+::: tip
+Product options and Product option values are defined at a system level and are translatable.
+:::
 
 ### Creating a `ProductOption`
 
@@ -412,7 +416,9 @@ $price = \GetCandy\Models\Price::create([
 ]);
 ```
 
-> {info} The same methods apply to the compare_price attribute
+::: tip
+The same methods apply to the compare_price attribute
+:::
 
 Return the value for the price column, as it is in the database
 ```php
@@ -502,7 +508,9 @@ $productType = GetCandy\Models\ProductType::create([
 ]);
 ```
 
-> {primary} This example assumes we already for Attributes set up for name and description and that they're assigned to the product type.
+::: tip Note
+This example assumes we already for Attributes set up for name and description and that they're assigned to the product type.
+:::
 
 ### Create the initial product
 
@@ -591,7 +599,9 @@ $optionValueIds = $size->values->merge($colour->values)->pluck('id');
 $product->generateVariants($optionValueIds);
 ```
 
-> {primary} When generating variants, the sku will be derived from the Product's base SKU, in this case `DRBOOT` and will be suffixed with `-{count}`.
+::: tip
+When generating variants, the sku will be derived from the Product's base SKU, in this case `DRBOOT` and will be suffixed with `-{count}`.
+:::
 
 The resulting generation is as follows:
 

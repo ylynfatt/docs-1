@@ -19,7 +19,9 @@
 Carts are a collection of products (or other custom purchasable types) that you would like to order.
 Carts belong to Users (which relate to Customers).
 
-> {info} Cart prices are dynamically calculated and are not stored (unlike Orders).
+::: tip
+Cart prices are dynamically calculated and are not stored (unlike Orders).
+:::
 
 <a name="carts"></a>
 ## Carts
@@ -96,7 +98,9 @@ $cart = $cart->getManager()->getCart();
 
 This will return a "hydrated" version of your cart will the following:
 
-> {info} All values will return a `GetCandy\Datatypes\Price` object. So you have access to the following: `value`, `formatted`, `decimal`
+::: tip
+All values will return a `GetCandy\Datatypes\Price` object. So you have access to the following: `value`, `formatted`, `decimal`
+:::
 
 ```php
 $cart->total; // The total price value for the cart
@@ -228,7 +232,9 @@ $cart->getManager()->setBillingAddress(
 <a name="cart-session-manager"></a>
 ## Cart Session Manager
 
-> {info} The cart session manager is useful if you're building a traditional Laravel storefront which makes use of sessions.
+::: tip
+The cart session manager is useful if you're building a traditional Laravel storefront which makes use of sessions.
+:::
 
 When building a store, you're going to want an easy way to fetch the cart for the current user (or guest user) by retrieving it from their current session. GetCandy provides an easy to use class to make this easier for you, so you don't have to keep reinventing the wheel.
 

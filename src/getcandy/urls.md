@@ -24,8 +24,9 @@ On your storefront, you could have:
 
 `apple-iphone` is the slug for a URL which would correspond to a product and would allow you to fetch it easily without having to expose IDs or do any weird round trips to your API.
 
->{info} A URL cannot share the same `slug` and `language_id` columns. You can also only have one `default` URL per language for that resource.
-
+::: tip
+A URL cannot share the same `slug` and `language_id` columns. You can also only have one `default` URL per language for that resource.
+:::
 
 ## Creating a URL
 
@@ -37,8 +38,9 @@ On your storefront, you could have:
 ]);
 ```
 
->{info} If you add a new default URL for a language which already has one, the new URL will override and become the new default.
-
+::: tip
+If you add a new default URL for a language which already has one, the new URL will override and become the new default.
+:::
 
 ```php
 $urlA = \GetCandy\Models\Url::create([

@@ -78,7 +78,9 @@ $products = [
 $collection->products()->sync($products);
 ```
 
-> {info} The key in the `$products` array is the product id
+::: tip
+The key in the `$products` array is the product id
+:::
 
 ### Sorting products
 
