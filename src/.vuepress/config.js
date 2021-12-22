@@ -35,7 +35,7 @@ module.exports = {
     nav: [
       {
         text: 'Roadmap',
-        link: 'https://getcandy.productboard.com/',
+        link: 'https://portal.productboard.com/getcandy/1-getcandy',
       },
       {
         text: 'Discord',
