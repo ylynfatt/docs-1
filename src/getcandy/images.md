@@ -58,8 +58,8 @@ GetCandy has their own set of transformations which are used throughout the syst
 ### Available options
 Each transformation definition accepts the following options
 
-|Key|Type|Description|Example|Default
-|:-|:-|:-|:-|
+|Key|Type|Description|Example|Default|
+|:-|:-|:-|:-|:-|
 |`width`|`integer`|The width of the transformation.|`500`|`null`
 |`height`|`integer`|The height of the transformation.|`400`|`null`
 |`collections`|`array`|An array of collections to limit the transformations to, by default they run across all of them.|`['images']`|`null`
