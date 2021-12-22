@@ -448,7 +448,7 @@ Price::create([
 
 In the above example if you order between 1 and 9 items you will pay `1.99` per item. But if you order at least 10 you will pay `1.50` per item.
 
-## Full Example.
+## Full Example
 
 For this example, we're going to be creating some Dr. Martens boots. Below is a screenshot of what we're aiming for:
 
