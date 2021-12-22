@@ -18,30 +18,44 @@
 composer require getcandy/getcandy
 ```
 
-### Add initial search config
+## Install a search provider
 
-GetCandy uses scout for search and to get you started we have included a mysql driver. To get this set up you will need to publish the Scout config as per their docs.
+GetCandy uses Laravel scout for search. We have had good success with using Meilisearch. Although it's entirely up to you as long as it's compatible.
 
-```php
-php artisan vendor:publish --provider="Laravel\Scout\ScoutServiceProvider"
+## Going with Meilisearch
+
+If you're on OSX then you could make use of [Takeout](https://github.com/tighten/takeout) which makes getting Meilisearch set up on Docker a breeze.
+
+Meilisearch also provide great documentation on how to get set up.
+
+[Install Meilisearch](https://docs.meilisearch.com/learn/getting_started/installation.html)
+
+Once you've done that, simple require the composer packages.
+
+```sh
+composer require meilisearch/meilisearch-php
 ```
 
-Then update the `SCOUT_DRIVER` to `mysql` and add this to your `scout.php` config file.
+### Hub Authentication
+
+We use our own authentication guard for the hub, nothing crazy, it just piggy backs off Laravel's own but allows us to use the `staff` table instead of users.
+Just add this to your `auth.php` config file:
 
 ```php
-/*
-|--------------------------------------------------------------------------
-| MySQL Configuration
-|--------------------------------------------------------------------------
-*/
-'mysql' => [
-    'mode' => 'LIKE_EXPANDED',
-    'model_directories' => [app_path()],
-    'min_search_length' => 0,
-    'min_fulltext_search_length' => 4,
-    'min_fulltext_search_fallback' => 'LIKE',
-    'query_expansion' => false
-],
+'guards' => [
+    // ...
+    'staff' => [
+        'driver' => 'getcandyhub',
+    ],
+]
+```
+
+### Run migrations
+
+As you'd expect, there's quite a few tables GetCandy needs to function, so run any migrations
+
+```sh
+php artisan migrate
 ```
 
 ### Run the Artisan installer
