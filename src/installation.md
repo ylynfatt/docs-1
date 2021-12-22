@@ -18,11 +18,17 @@
 composer require getcandy/getcandy
 ```
 
-## Install a search provider
+## Search configuration
 
-GetCandy uses Laravel scout for search. We have had good success with using Meilisearch. Although it's entirely up to you as long as it's compatible.
+GetCandy uses Laravel scout for search. We have had good success with using Meilisearch. Although it's entirely up to you as long as it's compatible. If you just want to give the wheels a spin, we also ship with a MySQL driver, just bear in mind this is highly restrictive and we do not recommend using this in any production capacity.
 
-## Going with Meilisearch
+Publish the scout config.
+
+```sh
+php artisan vendor:publish --provider="Laravel\Scout\ScoutServiceProvider"
+```
+
+### Going with Meilisearch
 
 If you're on OSX then you could make use of [Takeout](https://github.com/tighten/takeout) which makes getting Meilisearch set up on Docker a breeze.
 
@@ -36,7 +42,27 @@ Once you've done that, simple require the composer packages.
 composer require meilisearch/meilisearch-php
 ```
 
-### Hub Authentication
+### Going with MySQL
+
+Update the `SCOUT_DRIVER` to `mysql` and add this to your `scout.php` config file.
+
+```php
+/*
+|--------------------------------------------------------------------------
+| MySQL Configuration
+|--------------------------------------------------------------------------
+*/
+'mysql' => [
+    'mode' => 'LIKE_EXPANDED',
+    'model_directories' => [app_path()],
+    'min_search_length' => 0,
+    'min_fulltext_search_length' => 4,
+    'min_fulltext_search_fallback' => 'LIKE',
+    'query_expansion' => false
+],
+```
+
+## Hub Authentication
 
 We use our own authentication guard for the hub, nothing crazy, it just piggy backs off Laravel's own but allows us to use the `staff` table instead of users.
 Just add this to your `auth.php` config file:
@@ -50,7 +76,7 @@ Just add this to your `auth.php` config file:
 ]
 ```
 
-### Run migrations
+## Run migrations
 
 As you'd expect, there's quite a few tables GetCandy needs to function, so run any migrations
 
@@ -58,7 +84,7 @@ As you'd expect, there's quite a few tables GetCandy needs to function, so run a
 php artisan migrate
 ```
 
-### Run the Artisan installer
+## Run the Artisan installer
 
 ```sh
 php artisan getcandy:install
@@ -79,9 +105,3 @@ Note: there isn't currently a function to automatically remove the demo data.
 ::: tip Success 🎉
 You are now installed!
 :::
-
-### Running Seeders
-
-```sh
-php artisan db:seed --class=GetCandy\\\\Database\\\\Seeders\\\\DemoSeeder
-```
