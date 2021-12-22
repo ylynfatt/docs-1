@@ -4,11 +4,6 @@
 
 The admin hub is an open source app that allows you to manage all aspects of your GetCandy store.
 
-### Livewire admin hub, zero-config... just install and go!
-
-```sh
-composer require getcandy/admin-hub
-```
 
 ## Authentication
 

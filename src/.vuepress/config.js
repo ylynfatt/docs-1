@@ -49,14 +49,20 @@ module.exports = {
     sidebar: [
       {
         title: 'Getting Started',   // required
-        path: '/',      // optional, link of the title, which should be an absolute path and must exist
         collapsable: false, // optional, defaults to true
-        sidebarDepth: 1,    // optional, defaults to 1
         children: [
           '/',
           '/installation',
           '/configuration',
           '/upgrading'
+        ]
+      },
+      {
+        title: 'Admin Hub',
+        collapsable: false, // optional, defaults to true
+        children: [
+          '/admin-hub/overview',
+          '/admin-hub/staff'
         ]
       },
       {
@@ -80,14 +86,6 @@ module.exports = {
           '/getcandy/tags',
           '/getcandy/taxation',
           '/getcandy/urls'
-        ]
-      },
-      {
-        title: 'Admin Hub',
-        collapsable: false, // optional, defaults to true
-        children: [
-          '/admin-hub/overview',
-          '/admin-hub/staff'
         ]
       }
     ]
