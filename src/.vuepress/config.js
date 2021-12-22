@@ -56,7 +56,7 @@ module.exports = {
     lastUpdated: false,
     algolia: {
       apiKey: '83bfbfd25020e4e230abb7a2c6d94a1c',
-      indexName: 'getcandy'
+      indexName: 'getcandy2'
     },
     nav: [
       {
