@@ -1,14 +1,7 @@
 # Installation
 
----
+[[toc]]
 
-- [Requirements](#requirements)
-- [Core](#core)
-- [Admin Hub](#admin-hub)
-- [Frontend API](#frontend-api)
-- [Checkout](#checkout)
-
-<a name="requirements"></a>
 ## Requirements
 
 - PHP ^8.0
@@ -17,7 +10,6 @@
 - exif PHP extension (on most systems it will be installed by default)
 - GD PHP extension (used for image manipulation)
 
-<a name="core"></a>
 ## Install GetCandy
 
 ### Composer require package

@@ -1,19 +1,11 @@
 # Addresses
 
----
+[[toc]]
 
-- [Overview](#overview)
-- [Addresses](#addresses)
-- [Countries](#countries)
-- [States](#states)
-- [Address Data](#addressdata)
-
-<a name="overview"></a>
 ## Overview
 
 Customers may save addresses to make checking-out easier and quicker.
 
-<a name="addresses"></a>
 ## Addresses
 
 ```php
@@ -45,7 +37,6 @@ GetCandy\Models\Address
 |`created_at`||
 |`updated_at`||
 
-<a name="countries"></a>
 ## Countries
 
 ```php
@@ -68,7 +59,6 @@ GetCandy\Models\Country
 |`updated_at`||
 
 
-<a name="states"></a>
 ## States
 
 ```php
@@ -84,7 +74,6 @@ GetCandy\Models\State
 |`created_at`||
 |`updated_at`||
 
-<a name="addressdata"></a>
 ## Address Data
 
 Data for Countries and States is provided by https://github.com/dr5hn/countries-states-cities-database

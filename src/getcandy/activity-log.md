@@ -1,8 +1,8 @@
 # Activity Log
 
----
+[[toc]]
 
-- [Overview](#overview)
+## Overview
 
 We've made a design choice to have activity logging throughout GetCandy when it comes to changes happening on Eloquent models. We believe it's important to keep track of what updates are happening and who is making them. It allows us to provide you with an invaluable insight into what's happening in your store.
 

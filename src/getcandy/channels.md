@@ -1,11 +1,7 @@
 # Channels
 
----
+[[toc]]
 
-- [Overview](#overview)
-
-
-<a name="overview"></a>
 ## Overview
 
 Default `webstore`.

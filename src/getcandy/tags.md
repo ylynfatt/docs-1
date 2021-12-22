@@ -1,11 +1,7 @@
 # Tags
 
----
+[[toc]]
 
-- [Overview](#overview)
-- [Enabling Tags](#enablingtags)
-
-<a name="overview"></a>
 ## Overview
 
 Tags serve a simple function in GetCandy, you can add tags to models. This is useful for relating otherwise unrelated models in the system. They will also impact other parts of the system such as Dynamic collections.
@@ -16,7 +12,6 @@ For example, you could have two products "Blue T-Shirt" and "Blue Shoes", which 
 Heads up! Tags are converted uppercase as they are saved.
 :::
 
-<a name="enablingtags"></a>
 ## Enabling tags
 
 In order to enable tagging on a model, simply add the `HasTags` trait.

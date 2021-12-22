@@ -1,11 +1,7 @@
 # Languages
 
----
+[[toc]]
 
-- [Overview](#overview)
-
-
-<a name="overview"></a>
 ## Overview
 
 GetCandy supports multiple languages. By default, GetCandy is set to install a default language of "en" (English). However, this can be changed to whatever language you would like to use.

@@ -1,11 +1,7 @@
 # URLs
 
----
+[[toc]]
 
-- [Overview](#overview)
-
-
-<a name="overview"></a>
 ## Overview
 
 URLs are not to be confused with Routes in Laravel. You can create routes for a number of resources, but most commonly they would be created for a Product.

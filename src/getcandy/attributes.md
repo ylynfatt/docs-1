@@ -1,12 +1,7 @@
 # Attributes
 
----
+[[toc]]
 
-- [Overview](#overview)
-- [Attributes](#attributes)
-- [Attribute Groups](#attribute-groups)
-
-<a name="overview"></a>
 ## Overview
 
 Attributes can be associated to Eloquent models to allow custom data to be stored. Typically, these will be used the most with Products where different information is needed to be stored and presented to visitors.
@@ -18,7 +13,6 @@ For example, a television might have the following attributes assigned...
 * Tuner
 * Resolution
 
-<a name="attributes"></a>
 ## Attributes
 
 ```php
@@ -41,19 +35,20 @@ GetCandy\Models\Attribute
 
 ### Field Types
 
+
 |Type|Config|
-|:-|
-|`GetCandy\FieldTypes\Color`||
-|`GetCandy\FieldTypes\Datetime`| Date or Datetime|
+|:-|:-|
+|`GetCandy\FieldTypes\Color`| |
+|`GetCandy\FieldTypes\Datetime`|Date or Datetime|
 |`GetCandy\FieldTypes\File`|Images or all files|
-|`GetCandy\FieldTypes\JSON`||
+|`GetCandy\FieldTypes\JSON`| |
 |`GetCandy\FieldTypes\Measurement`|Weight, volume or dimensions (with UOM)|
 |`GetCandy\FieldTypes\Number`|Integer or Decimal|
 |`GetCandy\FieldTypes\Reference`|Links to a product, page, etc|
 |`GetCandy\FieldTypes\Select`|Multi-select|
 |`GetCandy\FieldTypes\Text`|Single-line, Multi-line, Rich Text|
-|`GetCandy\FieldTypes\Toggle`||
-|`GetCandy\FieldTypes\URL`||
+|`GetCandy\FieldTypes\Toggle`| |
+|`GetCandy\FieldTypes\URL`| |
 
 
 ### Models that use Attributes
@@ -206,17 +201,11 @@ class ProductVariant extends Model
 
 ```
 
-
-
-
-
-<a name="attribute-groups"></a>
 ## Attribute Groups
 
 Attribute Groups form a collection of attributes that are logically grouped together for display purposes.
 
 A good example might be an "SEO" attribute group which has attributes for "Meta Title" and "Meta Description".
-
 
 ```php
 GetCandy\Models\AttributeGroup

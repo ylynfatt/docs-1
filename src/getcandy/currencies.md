@@ -1,15 +1,11 @@
 # Currencies
 
----
+[[toc]]
 
-- [Overview](#overview)
-- [Creating a currency](#creating-a-currency)
-- [Currency Format](#currency-format)
-- [Exchange Rates](#exchange-rates)
+## Overview
 
 Currencies allow you to charge different amounts reletive to the currency you're targeting.
 
-<a name="creating-a-currency"></a>
 ## Creating a currency
 
 ```php
@@ -36,7 +32,6 @@ Currencies allow you to charge different amounts reletive to the currency you're
 |`enabled`|Whether the currency is enabled|
 |`default`|Whether the currency is the default|
 
-<a name="currency-format"></a>
 ## Currency Format
 
 The format in which currencies can appear can all potentially be different, to facilitate this GetCandy has a `format` column which you can specify how prices are displayed.
@@ -57,7 +52,6 @@ This then gives us the correct format and allows it to be specified per currency
 `{value}` must always be present, otherwise the price will not be swapped out correctly.
 :::
 
-<a name="exchange-rates"></a>
 ## Exchange rates
 These are relative to the default currency. For example assuming we have the following:
 

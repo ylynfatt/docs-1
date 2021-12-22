@@ -1,11 +1,7 @@
 # Contributing
 
----
+[[toc]]
 
-- [Overview](#overview)
-
-
-<a name="overview"></a>
 ## Overview
 
 

@@ -1,23 +1,11 @@
 # Associations
 
----
+[[toc]]
 
-- [Overview](#overview)
-- [Loading associations](#loading-associations)
-- [Types of Association](#typesofassociation)
-  - [Up-sell](#up-sell)
-  - [Cross-sell](#cross-sell)
-  - [Alternate](#alternate)
-  - [Custom Types](#custom)
-- [Removing Associations](#removing-associations)
-- [Database Schema](#database-schema)
-
-<a name="overview"></a>
 ## Overview
 
 Associations allow you to relate products to each other. There are a few different ways you can associate two products and this type of relationship would define how they are presented on your storefront and also how GetCandy sees them.
 
-<a name="loading-associations"></a>
 ## Loading associations
 
 ```php
@@ -33,10 +21,8 @@ $association->target // The associated (cross-sell, up-sell, alternate) product.
 $association->type // Whether it's cross-sell, up-sell or alternate.
 ```
 
-<a name="typesofassociation"></a>
 ## Types of association
 
-<a name="cross-sell"></a>
 ### Cross Sell
 
 Cross selling is the process of encouraging customers to purchase products or services in addition to the original items they intended to purchase. Oftentimes the cross-sold items are complementary to one another so customers have more of a reason to purchase both of them.
@@ -67,7 +53,6 @@ $product->associations()->crossSell()->get();
 $product->associations()->type(ProductAssociation::CROSS_SELL);
 ```
 
-<a name="up-sell"></a>
 ### Up Sell
 
 Upselling is the process of encouraging customers to upgrade or include add-ons to the product or service they’re buying. The product or service being promoted is typically a more expensive product or add ons which can increase the overall order value.
@@ -101,7 +86,6 @@ $product->associations()->upSell()->get();
 $product->associations()->type(ProductAssociation::UP_SELL);
 ```
 
-<a name="alternate"></a>
 ### Alternate
 
 Alternate products are what you could present the user as an alternative to the current product. This is helpful in situations where the product might be out of stock or not quite fit for purpose and you could show these.
@@ -128,7 +112,6 @@ $product->associations()->alternate()->get();
 $product->associations()->type(ProductAssociation::ALTERNATE);
 ```
 
-<a name="custom"></a>
 ### Custom types
 
 Although GetCandy comes preloaded with the associations above, you are free to add your own custom association types.
@@ -146,7 +129,6 @@ You can then fetch all associated products like so:
 $product->associations()->type('my-custom-type')->get();
 ```
 
-<a name="removing-associations"></a>
 ## Removing associations
 
 You can dissaciate products with one simple method. If you only pass through the related models, or an array of models, all associations will be removed. If you wish to only remove associations for a certain type you can pass the type through as the second parameter.
@@ -162,7 +144,6 @@ $product->dissociate([/* ... */])
 $product->dissociate($associatedProduct, Product::CROSS_SELL);
 ```
 
-<a name="database-schema"></a>
 ## Database Schema
 
 `product_associations`

@@ -1,19 +1,7 @@
 # Carts
 
----
+[[toc]]
 
-- [Overview](#overview)
-- [Carts](#carts)
-  - [Creating a cart](#creating-a-cart)
-- [Cart Lines](#cart-lines)
-- [Cart Manager](#cart-manager)
-- [Modifying Carts](#modifying-carts)
-- [Calculating Tax](#calculating-tax)
-- [Cart Session Manager](#cart-session-manager)
-- [Saved Carts](#saved_carts)
-
-
-<a name="overview"></a>
 ## Overview
 
 Carts are a collection of products (or other custom purchasable types) that you would like to order.
@@ -23,7 +11,6 @@ Carts belong to Users (which relate to Customers).
 Cart prices are dynamically calculated and are not stored (unlike Orders).
 :::
 
-<a name="carts"></a>
 ## Carts
 
 ```php
@@ -42,7 +29,6 @@ GetCandy\Models\Cart
 |updated_at|When an order was created from the basket, via a checkout.|
 |meta|JSON data for saving any custom information.|
 
-<a name="creating-a-cart"></a>
 ### Creating a cart
 
 ```php
@@ -52,7 +38,6 @@ $cart = Cart::create([
 ]);
 ```
 
-<a name="cart_lines"></a>
 ## Cart Lines
 
 ```php
@@ -89,7 +74,6 @@ Now you have a basic Cart up and running, it's time to show you how you would us
 
 We've also tried to make Carts extendable as much as possible so, depending on what your stores requirements are, you are free to chop and change things as much as you need to.
 
-<a name="cart-manager"></a>
 ## The cart manager
 
 ```php
@@ -118,7 +102,6 @@ foreach ($cart->taxBreakdown as $taxRate) {
 Each `CartLine` has access to the same properties as a Cart does.
 
 
-<a name="modifying-carts"></a>
 ## Modifying Carts
 
 There may instances where you need to make changes to a cart or cart line, before and/or after calculations have taken place. For this GetCandy usees `Pipelines`. The cart/cart lines are pumped through these pipelines and you are free to make any changes you need either before or after calculation:
@@ -184,7 +167,6 @@ public function boot(
 }
 ```
 
-<a name="calculating-tax"></a>
 ## Calculating Tax
 
 During the cart's lifetime, it's unlikely you will have access to any address information, which can be a pain when you want to accurately display the amount of tax applied to the basket. Moreover, some countries don't even show tax until they reach the checkout. We've tried to make this as easy and extendable as possible for you as the developer to build your store.
@@ -229,7 +211,6 @@ $cart->getManager()->setBillingAddress(
 );
 ```
 
-<a name="cart-session-manager"></a>
 ## Cart Session Manager
 
 ::: tip
@@ -364,7 +345,6 @@ $cart->billingAddress;
 ## Handling user login in
 When a user logs in, you will likely want to check if they have a cart associated to their account and use that, or if they have started a cart as a guest and logged in, you will likely want to be able to handle this. GetCandy takes the pain out of this by listening to the authentication events and responding automatically by associating any previous guest cart they may have had and, depending on your `auth_policy` merge or override the basket on their account.
 
-<a name="saved_carts"></a>
 ## Saved Carts
 
 ```php

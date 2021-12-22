@@ -1,10 +1,7 @@
 # Configuration
 
----
+[[toc]]
 
-- [Overview](#overview)
-
-<a name="overview"></a>
 ## Overview
 
 Configuration for GetCandy is separated into individual files under `config/getcandy`. You can either override the different config options adhoc or you can publish all the configration options and tweak as you see fit.

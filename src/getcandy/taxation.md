@@ -1,17 +1,12 @@
 # Taxation
 
----
+[[toc]]
 
-- [Tax Classes](#classes)
-- [Tax Zones](#zones)
-- [Tax Rates](#rates)
-- [Settings](#settings)
-- [Extending](#extending)
+## Overview
 
 No one likes taxes! But we have to deal with them... GetCandy provides manual tax rules to implement the correct sales tax for each order. For complex taxation (e.g. US States) we suggest integrating with a service such as [TaxJar](https://www.taxjar.com/).
 
 
-<a name="classes"></a>
 ## Tax Classes
 
 Tax Classes are assigned to Products and allow us to clasify products to certain taxable groups that may have differing tax rates.
@@ -33,9 +28,6 @@ $taxClass = TaxClass::create([
 ]);
 ```
 
-
-
-<a name="zones"></a>
 ## Tax Zones
 
 These specify a geographic zone for tax rates to be applied. Tax Zones can be based upon countries, states or zip/post codes.
@@ -128,7 +120,6 @@ GetCandy\Models\TaxZoneCustomerGroup
 |updated_at||
 
 
-<a name="rates"></a>
 ## Tax Rates
 
 Tax Zones have one or many tax rates. E.g. you might have a tax rate for the State and also the City, which would collectively make up the total tax amount.
@@ -159,14 +150,11 @@ GetCandy\Models\TaxRateAmount
 |updated_at||
 
 
-
-<a name="settings"></a>
 ## Settings
 - Shipping and other specific costs are assigned to tax classes in the settings.
 - Calculate tax based upon Shipping or Billing address?
 - Default Tax Zone
 
-<a name="extending"></a>
 ## Extending
 
 Taxation is a tricky business and sometimes what GetCandy offers simply won't be enough, and we completely understand. This why Taxation is now driver based, so you can add your own logic if you need to.

@@ -1,19 +1,11 @@
 # Customers
 
----
+[[toc]]
 
-- [Overview](#overview)
-- [Customers](#customers)
-- [Users](#users)
-- [Customer Groups](#customergroups)
-
-
-<a name="overview"></a>
 ## Overview
 
 We use Customers in GetCandy to store the customer details, rather than Users. We do this for a few reasons. One, so that we leave your User models well alone and two, because it provides flexibilty.
 
-<a name="customers"></a>
 ## Customers
 
 ```php
@@ -52,7 +44,6 @@ GetCandy\Models\Customer::create([
 - Customer Groups `customer_customer_group`
 - Users - `customer_user`
 
-<a name="users"></a>
 ## Users
 
 Customers will typically be associated with a user, so they can place orders. But it is also possible to have multiple users associated with a customer. This can be useful on B2B e-commerce where a customer may have multiple buyers.
@@ -77,7 +68,6 @@ $customer->customerGroups()->attach($customerGroup);
 $customer->customerGroups()->sync([4,5,6]);
 ```
 
-<a name="customergroups"></a>
 ## Customer Groups
 
 Default `retail`

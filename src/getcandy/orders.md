@@ -1,16 +1,7 @@
 # Orders
 
----
+[[toc]]
 
-- [Overview](#overview)
-- [Create an order](#create-an-order)
-- [Order Lines](#order-lines)
-- [Order Addresses](#order-addresses)
-- [Shipping Options](#shipping-options)
-- [Transactions](#transactions)
-- [Payments](#payments)
-
-<a name="overview"></a>
 ## Overview
 
 As you'd expect, orders on an online system show what users have purchased. They are linked to a Cart and you can only have 1 order per cart in the database.
@@ -42,7 +33,6 @@ GetCandy\Models\Order
 |created_at||
 |updated_at||
 
-<a name="create-an-order"></a>
 ## Create an order
 
 You can either create an order directly, or the recommended way is via a `Cart` model.
@@ -151,8 +141,6 @@ public function creating(Cart $cart)
 }
 ```
 
-
-<a name="order-lines"></a>
 ## Order Lines
 
 ```php
@@ -203,7 +191,6 @@ $order->lines()->create([
 ]);
 ```
 
-<a name="order-addresses"></a>
 ## Order Addresses
 
 An order can have many addresses, typically you would just have one for billing and one for shipping.
@@ -247,7 +234,6 @@ $order->billingAddress;
 ```
 
 
-<a name="shipping-options"></a>
 ## Shipping Options
 
 ::: tip
@@ -319,8 +305,6 @@ Once the user has selected the shipping option they want, you will need to add t
 $cart->getManager()->setShippingOption(\GetCandy\DataTypes\ShippingOption $option);
 ```
 
-
-<a name="transactions"></a>
 ## Transactions
 
 ```php
@@ -372,7 +356,6 @@ $order->charges; // Get all transactions that are charges.
 $order->refunds; // Get all transactions that are refunds.
 ```
 
-<a name="payments"></a>
 ## Payments
 
 We will be looking to add support for the most popular payment providers, so keep an eye out here as we will list them all out.

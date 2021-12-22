@@ -1,39 +1,13 @@
 # Products
 
----
+[[toc]]
 
-- [Overview](#overview)
-- [Creating a product](#creatingproduct)
-- [Customer Groups](#customergroups)
-- [Product Types](#product-types)
-- [Product Identifiers](#product-identifiers)
-- [Product Options](#product-options)
-- [Product Shipping](#product-shipping)
-    - [Product Dimensions](#product-dimensions)
-- [Variants](#variants)
-- [Pricing](#pricing)
-  - [Overview](#pricing-overview)
-  - [Base Pricing](#base-pricing)
-  - [Customer Group Pricing](#customer-group-pricing)
-  - [Tiered Pricing](#tiered-pricing)
-- [Full Example](#full-example)
-
-<a name="overview"></a>
 ## Overview
 
 Products are generally what you will be selling in your store. You define all your attributes against the product and products can also have variations. In GetCandy a product will always have at least one variation. From a UX point of view, it will just look like you're editing a single product, but behind the scenes you'll be editing one variant.
 
 Products also belong to a `ProductType` and aside from the attributes, which you are free to define yourself, will have a base SKU and a brand name.
 
-<!-- ```php
-GetCandy\Models\Product
-GetCandy\Models\ProductType
-
-``` -->
-
-<!-- - `attributes` attribute values (Laravel Collection) -->
-
-<a name="creatingproduct"></a>
 ## Creating a product
 
 ```php
@@ -51,7 +25,6 @@ GetCandy\Models\Product::create([
 ]);
 ```
 
-<a name="customergroups"></a>
 ## Customer Groups
 
 You can assign customer groups to a product, this allows you to either always have that product enabled for the customer group, or you can state which dates they should be active for (as long as the customer group is enabled).
@@ -84,7 +57,6 @@ $products = \GetCandy\Models\Product::customerGroup([
 ])->paginate(50);
 ```
 
-<a name="product-types"></a>
 ## Product Types
 
 e.g. Television, T-Shirt, Book, Phone, etc.
@@ -120,7 +92,6 @@ $product->productType;
 $product->load(['productType']);
 ```
 
-<a name="product-identifiers"></a>
 ##  Product Identifiers
 
 You can choose to add product idenfitiers to each product variant. These are fields which, as the name suggests, allow you to identify a product and it's variants for use in your internal systems. You can choose whether these are required and unique in the hub whilst editing.
@@ -168,7 +139,6 @@ Depending on your storefront needs, you might not need any of these fields to be
     ],
 ```
 
-<a name="product-options"></a>
 ##  Product Options
 
 These are what you use to define the different options a product has available to it. These are directly related to the different variants a product might have. Each `ProductOption` will have a set of `ProductOptionValue` models related to it. For example:
@@ -212,7 +182,6 @@ $option->values()->createMany([
 
 This Product option and it's values are now ready to be used to with Product Variants.
 
-<a name="product-shipping"></a>
 # Product Shipping
 
 By default GetCandy will mark all product variants as `shippable`. If you don't need to ship a certain variant then you can simply set this to false.
@@ -223,7 +192,6 @@ $variant->update([
 ]);
 ```
 
-<a name="product-dimensions"></a>
 ## Product dimensions
 
 Product's can have different dimensions assigned to them, the values we have available are
@@ -317,7 +285,6 @@ If you want to display a formatted value, you can!
 $variant->length->format(); // 50cm
 ```
 
-<a name="variants"></a>
 ## Variants
 
 Variants allow you to specify different variations of a product. Think things like Small Blue T-shirt, or Size 8 and Size 9 Leather Boots. Your product is the main parent and your variants are based off that product to create multiple permutations.
@@ -386,10 +353,8 @@ When creating variants there are some exceptions that will be thrown if certain 
 |`GetCandy\Exceptions\InvalidProductValuesException`|Thrown if you try and create a variant with less option values than what are required.|
 |`Illuminate\Validation\ValidationException`|Thrown if validation fails on the value options array.|
 
-<a name="pricing"></a>
 ## Pricing
 
-<a name="pricing-overview"></a>
 ### Overview
 
 Prices are stored in the database as integers. When retrieving a `Price` model the `price` and `compare_price` attributes are cast to a `Price` datatype. This casting gives you some useful helpers when dealing with prices on your front end.
@@ -436,7 +401,6 @@ You can get the full formatted value for the price, this is based on the currenc
 $price->price->formatted // £1.99
 ```
 
-<a name="base-pricing"></a>
 ### Base Pricing
 
 Pricing is defined on a variant level, meaning you will have a different price for each variant and also for each currency in the system. In order to add pricing to a variant, you can either create the model directly or use the relationship method.
@@ -458,12 +422,10 @@ Pricing is defined on a variant level, meaning you will have a different price f
 $variant->prices()->create([/* .. */]);
 ```
 
-<a name="customer-group-pricing"></a>
 ### Cutomer group pricing
 
 You can specify which customer group the price applies to by setting the `customer_group_id` column. If left as `null` the price will apply to all customer groups. This is useful if you want to have different pricing for certain customer groups and also different price tiers per customer group.
 
-<a name="tiered-pricing"></a>
 ### Tiered Pricing
 
 Tiered pricing is a concept in which when you buy in bulk, the cost per item will change (usually go down). With Pricing on GetCandy, this is determined by the `tier` column when creating prices. For example:
@@ -486,7 +448,6 @@ Price::create([
 
 In the above example if you order between 1 and 9 items you will pay `1.99` per item. But if you order at least 10 you will pay `1.50` per item.
 
-<a name="full-example"></a>
 ## Full Example.
 
 For this example, we're going to be creating some Dr. Martens boots. Below is a screenshot of what we're aiming for:

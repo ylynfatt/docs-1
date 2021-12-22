@@ -1,9 +1,6 @@
 # Collections
 
----
-
-- [Collection Groups](#collection-groups)
-
+[[toc]]
 
 ## Overview
 

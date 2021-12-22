@@ -1,27 +1,12 @@
 # Images
 
----
-
-- [Images](#images)
-  - [Overview](#overview)
-    - [Base Configuration](#base-configuration)
-  - [Adding media to models](#adding-media-to-models)
-  - [Fetching media](#fetching-media)
-  - [Transformations](#transformations)
-    - [Available options](#available-options)
-  - [Extending](#extending)
-    - [Extending with GetCandy](#extending-with-getcandy)
-
-
-<a name="overview"></a>
+[[toc]]
 
 ## Overview
 
 For handling media across GetCandy we use the brilliant [Laravel-medialibrary](https://spatie.be/docs/laravel-medialibrary) package by Spatie. We are committed to only bringing in additional dependencies when absolutley makes sense and we feel in this case, the medialibrary package offers alot of features we would just end up trying to replicate anyway. Don't reinvent the wheel right?
 
 For uploading images in the hub we are using [FilePond](https://pqina.nl).
-
-<a name="base-configuration"></a>
 
 ### Base Configuration
 
@@ -31,8 +16,6 @@ Below is a list of models which currently support media:
 
 - `GetCandy\Models\Product`
 - `GetCandy\Models\Collection`
-
-<a name="adding-images-to-models"></a>
 
 ## Adding media to models
 
@@ -54,9 +37,6 @@ $product = \GetCandy\Models\Product::find(123);
 $product->getMedia();
 ```
 For more information on what's available, see [Retrieving media](https://spatie.be/docs/laravel-medialibrary/v9/basic-usage/retrieving-media)
-
-
-<a name="transformations"></a>
 
 ## Transformations
 
