@@ -16,7 +16,7 @@ php artisan vendor:publish --tag=getcandy
 
 So that GetCandy tables do not conflict with your existing application database tables, you can specify a prefix to use. If you change this after installation, you are on your own - happy renaming!
 
-````php
+```php
     'table_prefix' => 'getcandy_',
 ```
 
