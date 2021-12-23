@@ -18,7 +18,7 @@
 composer require getcandy/getcandy
 ```
 
-### Publish the config files
+### Publish the Config Files
 
 ```sh
 php artisan vendor:publish --tag=getcandy
