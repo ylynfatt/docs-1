@@ -143,12 +143,6 @@ This will take you through a set of questions to configure your GetCandy install
 - Seeding initial data
 - Inviting you to star our repo on GitHub ⭐
 
-
-::: tip Success 🎉
-You are now installed! You can access the admin hub at `http://<yoursite>/hub`
-:::
-
-
 ## Final Meilisearch Set-up
 
 If you are using Meilisearch, you just need to do some final configuration. Simply run this command.
@@ -156,6 +150,10 @@ If you are using Meilisearch, you just need to do some final configuration. Simp
 ```sh
 php artisan getcandy:meilisearch:setup
 ```
+
+::: tip Success 🎉
+You are now installed! You can access the admin hub at `http://<yoursite>/hub`
+:::
 
 ## Spread the Word
 
