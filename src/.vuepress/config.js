@@ -54,10 +54,6 @@ module.exports = {
     editLinkText: 'Help us improve this page!',
     smoothScroll: true,
     lastUpdated: false,
-    algolia: {
-      apiKey: '83bfbfd25020e4e230abb7a2c6d94a1c',
-      indexName: 'getcandy2'
-    },
     nav: [
       {
         text: 'Roadmap',
