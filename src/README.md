@@ -14,4 +14,4 @@ Keep an eye on [our roadmap](https://portal.productboard.com/getcandy/1-getcandy
 
 ## Get started
 
-Enough waffle! Let's help you [install GetCandy...](/installation)
+Enough waffle! Let's help you [install GetCandy...](/installation.html)

@@ -122,7 +122,7 @@ php artisan getcandy:hub:install
 ## Run Migrations
 
 ::: tip
-GetCandy uses table prefixes to avoid conflicts with your app's tables. You can change this in the [configuration](/configuration).
+GetCandy uses table prefixes to avoid conflicts with your app's tables. You can change this in the [configuration](/configuration.html).
 :::
 
 As you'd expect, there's quite a few tables GetCandy needs to function, so run the migrations now.
