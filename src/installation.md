@@ -148,6 +148,15 @@ This will take you through a set of questions to configure your GetCandy install
 You are now installed! You can access the admin hub at `http://<yoursite>/hub`
 :::
 
+
+## Last Meilisearch bits
+
+If you are usining Meilisearch, once everything is installed we just need to do some final configuration now the index are are up. Simply run this command.
+
+```php
+php artisan getcandy:meilisearch:setup
+```
+
 ## Spread the Word
 
 If you enjoy our project, please share it with others. The more developers using GetCandy the more we can put back into the project.
