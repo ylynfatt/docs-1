@@ -42,7 +42,7 @@ php artisan vendor:publish --provider="Laravel\Scout\ScoutServiceProvider"
 Meilisearch is the recommended search driver for GetCandy.
 :::
 
-If you're on OSX then you can make use of [Takeout](https://github.com/tighten/takeout) which makes getting Meilisearch set up on Docker a breeze.
+If you're on OSX then you can use [Takeout](https://github.com/tighten/takeout) which makes installing Meilisearch via Docker a breeze.
 
 Meilisearch also provide great documentation on how to get set up.
 
