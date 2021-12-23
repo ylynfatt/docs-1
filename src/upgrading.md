@@ -12,12 +12,17 @@ To upgrade to the latest v2 release, follow these steps.
 composer update getcandy/getcandy
 ```
 
+### Run Migrations
+
+```sh
+php artisan migrate
+```
+
 ### Re-Publish Hub Assets
 
 ```sh
 php artisan getcandy:hub:install --force
 ```
-
 
 ## Migrating from v0.12.*
 
