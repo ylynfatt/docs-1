@@ -24,14 +24,14 @@ So that GetCandy tables do not conflict with your existing application database 
 
 `getcandy/orders.php`
 
-- Pending order expiry
-- Statuses ??? Should these go in the database?
+Here you can set up the statuses you wish to use for your orders.
 
 ```php
-'pending' => [
-    'timeout' => 30, // 30 minutes
-    'timeout_auto_extend' => true,
-],
+    'draft_status' => 'awaiting-payment',
+    'statuses' => [
+        'awaiting-payment' => 'Awaiting Payment',
+        'dispatched' => 'Dispatched',
+    ],
 ```
 
 

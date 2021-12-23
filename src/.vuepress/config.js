@@ -73,7 +73,7 @@ module.exports = {
         title: 'Getting Started',   // required
         collapsable: false, // optional, defaults to true
         children: [
-          '/',
+          ['/', 'Overview'],
           '/installation',
           '/configuration',
           '/upgrading'
