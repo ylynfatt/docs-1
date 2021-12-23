@@ -54,7 +54,7 @@ Once you have Meilisearch up and running, simply require the composer packages.
 composer require meilisearch/meilisearch-php http-interop/http-factory-guzzle
 ```
 
-Add/update the entry in your `.env` file as follows.
+Add/update the entry in your `.env` file as follows, changing the host and key as required.
 
 ```
 SCOUT_DRIVER=meilisearch
